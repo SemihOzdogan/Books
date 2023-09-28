@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "235217055938",
+    "project_id": "books-e347f",
+    "storage_bucket": "books-e347f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235217055938:android:ac04873dda954eefb2cb5b",
+        "android_client_info": {
+          "package_name": "com.semih.ozdogan.books"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYVAtVpH5uEJcD1w1ROoL3Gz2lGLD0tAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

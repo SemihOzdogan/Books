@@ -18,13 +18,26 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./assets/google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.semih.ozdogan.books"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app"
+    ]
+  },
+  "extra": {
+    "eas": {
+      "projectId": "646aff77-ff87-4e90-a97e-119319f9ba5f"
     }
-  }
+  },
+  "plugins": [
+    "expo-build-properties"
+  ]
 }
