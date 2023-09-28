@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { ActivityIndicator, Platform, View, Text, Button } from 'react-native';
+import { ActivityIndicator, StyleSheet } from 'react-native';
 import { getBooksList } from '../redux/actions';
 import { connect } from 'react-redux';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationProp } from '@react-navigation/native';
-import * as Device from 'expo-device';
-import * as Notifications from 'expo-notifications';
-import Constants from 'expo-constants';
+// import * as Device from 'expo-device';
+// import * as Notifications from 'expo-notifications';
+// import Constants from 'expo-constants';
 
 // Notifications.setNotificationHandler({
 //   handleNotification: async () => ({
@@ -112,7 +112,7 @@ const GetBooks: React.FC<GetBooksProps> = (props) => {
   }, [props.books.loading]);
 
   return (
-    <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <SafeAreaView style={styles.container}>
       {props.books.loading ? (
         <ActivityIndicator size="large" color="green" />
       ) : (
@@ -121,7 +121,9 @@ const GetBooks: React.FC<GetBooksProps> = (props) => {
     </SafeAreaView>
   );
 };
-
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+});
 const mapStateToProps = (state: any) => {
   return {
     books: state.books,
