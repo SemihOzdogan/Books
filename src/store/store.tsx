@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import thunk from 'redux-thunk'
-import { booksReducer } from './reducers'
+import { booksReducer } from './reducers/reducers'
 
 const rootreducer = combineReducers({ books: booksReducer })
 

@@ -3,7 +3,6 @@ import { View, StyleSheet, SafeAreaView, FlatList, TextInput, TouchableOpacity }
 import { connect } from 'react-redux'
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
 import BookItem from '../components/BookItem';
-// import analytics from '@react-native-firebase/analytics';
 
 interface Book {
   title: string;
@@ -43,12 +42,6 @@ const Home: React.FC<HomeProps> = (props: any) => {
     },
 
     sortList = async (val: 'asc' | 'desc') => {
-      // await analytics().logEvent('deneme', {
-      //   id: 3333,
-      //   item: 'Expo rocks!',
-      //   description: 'facebook',
-      //   size: "L"
-      // });
       const sortData = [...tempData];
       if (val === "asc") {
         sortData.sort((a, b) => a.publicationYear - b.publicationYear);

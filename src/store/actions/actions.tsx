@@ -1,5 +1,5 @@
-import { GET_BOOKS_SUCCESS, GET_BOOKS_FAİL, GET_BOOKS_PENDING } from "./types"
-import axios from 'axios'
+import { GET_BOOKS_SUCCESS, GET_BOOKS_FAİL, GET_BOOKS_PENDING } from "../types"
+import API from '../service';
 
 const getBooksPending = () => {
     return {
@@ -24,7 +24,7 @@ const getBooksFail = (err: any) => {
 export const getBooksList = () => {
     return (dispatch: any) => {
         dispatch(getBooksPending);
-        axios.get('https://my-json-server.typicode.com/kyhnlbyrk/fake-api/db').then(res => {
+        API.get('/db').then(res => {
             let books = res.data.books
             dispatch(getBooksSuccess(books))
         }).catch(err => {

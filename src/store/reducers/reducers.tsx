@@ -1,4 +1,4 @@
-import { GET_BOOKS_PENDING, GET_BOOKS_FAİL, GET_BOOKS_SUCCESS } from "./types"
+import { GET_BOOKS_PENDING, GET_BOOKS_FAİL, GET_BOOKS_SUCCESS } from "../types"
 
 const initialstate = {
     data: [],
