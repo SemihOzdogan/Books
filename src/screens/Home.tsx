@@ -3,16 +3,13 @@ import { View, StyleSheet, SafeAreaView, FlatList, TextInput, TouchableOpacity }
 import { connect } from 'react-redux'
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
 import BookItem from '../components/BookItem';
+import { BookItemModel } from '../models/models';
 
-interface Book {
-  title: string;
-  author: string;
-  publicationYear: number;
-}
+
 
 interface HomeProps {
   books: {
-    data: Book[];
+    data: BookItemModel[];
   };
 }
 
@@ -28,7 +25,7 @@ const Home: React.FC<HomeProps> = (props: any) => {
     textInput,
   } = styles,
     [text, setText] = useState<string>(''),
-    [tempData, setTempData] = useState<Book[]>(props.books.data),
+    [tempData, setTempData] = useState<BookItemModel[]>(props.books.data),
 
     searchFilterFunction = (text: string) => {
       setText(text);

@@ -1,14 +1,9 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
+import { BookItemModel } from '../models/models';
 
-interface BookItemProps {
-  title: string;
-  author: string;
-  publicationYear: Number;
-}
-
-const BookItem: React.FC<BookItemProps> = ({ title, author, publicationYear }) => {
+const BookItem: React.FC<BookItemModel> = ({ title, author, publicationYear }) => {
   return (
     <View style={styles.container}>
       <View style={styles.bookmarkIcon}>
